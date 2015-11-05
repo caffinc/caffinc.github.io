@@ -1,0 +1,30 @@
+
+#--------------------------------------------------------
+
+ Database Table Backup
+#--------------------------------------------------------
+
+ wp_commentmeta(44)
+ wp_comments(12)
+ wp_links(0)
+ wp_options(219)
+ wp_postmeta(130)
+ wp_posts(90)
+ wp_term_relationships(87)
+ wp_term_taxonomy(61)
+ wp_terms(61)
+ wp_usermeta(19)
+ wp_users(1)
+#--------------------------------------------------------
+
+ NOTICE: Do NOT post to public sites or forums 
+#--------------------------------------------------------
+
+ Backup File Name : 2015_10_26_14458613069854.zip
+ Backup File Path : http://caffinc.com/blog/wp-content/uploads/wp_all_backup/2015_10_26_14458613069854.zip
+ Backup Type : complete
+ #--------------------------------------------------------
+
+ Zip method: ZipArchive 
+
+ Exclude Rule : wp_all_backup||.git|.svn
