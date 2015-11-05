@@ -26,26 +26,22 @@ Deploying the jar using the plugin was straightforward. I configured the project
 In bash, you can access the PID of the last executed command using `$!`  
 We add transfer sets to execute commands to kill the previously running process, copy the jar, and start a new process. However, this is not as straightforward as you&#8217;d think. I ran this script to run the jar and store the pid in a file called `xyz.pid`:
 
-```
-#!/bin/bash
-nohup /usr/bin/java -jar /var/lib/xyz/xyz.jar &
-echo $! >> /var/lib/xyz/xyz.pid
-```
+    #!/bin/bash
+    nohup /usr/bin/java -jar /var/lib/xyz/xyz.jar &
+    echo $! >> /var/lib/xyz/xyz.pid
 
 The first line is just to indicate that this is a bash script, I&#8217;m not sure if that&#8217;s required. The second line starts the jar in the background using [nohup][2]. The third line pipes the PID into a file. So far so good.
 
 Now that the PID is getting written to a file, I add a transfer set **before** this one to stop the running process using the PID from the file, and delete the xyz.pid file:
 
-```
-#!/bin/bash
-FILE=/var/lib/xyz/xyz.pid
-if [ -f "$FILE" ];
-then
-read pid < "$FILE"
-kill "$pid"
-rm "$FILE"
-fi
-```
+    #!/bin/bash
+    FILE=/var/lib/xyz/xyz.pid
+    if [ -f "$FILE" ];
+    then
+    read pid < "$FILE"
+    kill "$pid"
+    rm "$FILE"
+    fi
 
 My final configuration so far looks something like this:  
 [<img class="aligncenter size-full wp-image-64" src="http://caffinc.com/wp-content/uploads/2015/05/build_transfer_sets.png?fit=788%2C781" alt="build_transfer_sets" data-recalc-dims="1" />][3]
@@ -56,12 +52,10 @@ I tried several more combinations of scripts, and eventually I realized that the
 
 I now changed the exec script to this:
 
-```
-#!/bin/bash
-nohup /usr/bin/java -jar /var/lib/xyz/xyz.jar &#038;
-echo $! >> /var/lib/xyz/xyz.pid
-sleep 1
-```
+    #!/bin/bash
+    nohup /usr/bin/java -jar /var/lib/xyz/xyz.jar &#038;
+    echo $! >> /var/lib/xyz/xyz.pid
+    sleep 1
 
 I assume the issue was with the nohup being unable to change the parent of the command to root soon enough, and so the process got killed as soon as the SSH was disconnected. I left the **Exec in pty** checkbox checked. This build now works as required! Every time I execute the build, the old process is killed, a new jar takes its place and it&#8217;s started, all in a matter of a few seconds!
 
