@@ -22,4 +22,4 @@ But now I know better. To check for equality in MongoDB, you just put the second
 
 This checks if the field named &#8220;a&#8221; equals 123.
 
-That&#8217;s about it. Simple, but not quite straightforward to a person fresh out of the RDBMs world and new to MongoDB <img src="http://i0.wp.com/caffinc.com/blog/wp-includes/images/smilies/simple-smile.png?w=788" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" data-recalc-dims="1" />
+That&#8217;s about it. Simple, but not quite straightforward to a person fresh out of the RDBMs world and new to MongoDB :)

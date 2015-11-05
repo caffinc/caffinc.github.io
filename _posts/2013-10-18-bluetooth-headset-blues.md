@@ -9,7 +9,7 @@ categories:
 After much deliberation, I finally purchased a pair of Nokia BH-505 headsets:
 
 <div style="width: 559px" class="wp-caption alignnone">
-  <img alt="Nokia BH-505 White" src="http://i1.wp.com/cdn.shopclues.com/images/detailed/552/NokiaBH505White_1369984580.jpg?resize=549%2C211" data-recalc-dims="1" />
+  <img alt="Nokia BH-505 White" src="http://caffinc.com/wp-content/uploads/2013/10/nokia-bh-505.jpg" data-recalc-dims="1" />
   
   <p class="wp-caption-text">
     Nokia BH-505 White
