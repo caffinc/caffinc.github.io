@@ -26,7 +26,7 @@ By default, Jenkins runs on port 8080. I&#8217;m relatively new to Linux, and I 
 </p>
 
 <div id="attachment_22" style="width: 310px" class="wp-caption alignleft">
-  <a href="http://i0.wp.com/caffinc.com/blog/wp-content/uploads/2014/07/jenkins_port_screenshot.png"><img class="size-medium wp-image-22" alt="IT'S OVER 9000! Change the HTTP_PORT value to whatever you need to." src="http://i1.wp.com/caffinc.com/blog/wp-content/uploads/2014/07/jenkins_port_screenshot-300x173.png?fit=300%2C173" data-recalc-dims="1" /></a>
+  <a href="http://caffinc.com/wp-content/uploads/2014/07/jenkins_port_screenshot.png"><img class="size-medium wp-image-22" alt="IT'S OVER 9000! Change the HTTP_PORT value to whatever you need to." src="http://caffinc.com/wp-content/uploads/2014/07/jenkins_port_screenshot-300x173.png?fit=300%2C173" data-recalc-dims="1" /></a>
   
   <p class="wp-caption-text">
     IT&#8217;S OVER 9000! Change the HTTP_PORT value to whatever you need to.
