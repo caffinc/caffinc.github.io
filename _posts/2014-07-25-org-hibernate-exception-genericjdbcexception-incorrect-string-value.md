@@ -1,5 +1,5 @@
 ---
-title: 'org.hibernate.exception .GenericJDBCException: Incorrect string value'
+title: 'org.hibernate.exception.GenericJDBCException: Incorrect string value'
 author: admin
 layout: post
 permalink: /2014/07/org-hibernate-exception-genericjdbcexception-incorrect-string-value/
