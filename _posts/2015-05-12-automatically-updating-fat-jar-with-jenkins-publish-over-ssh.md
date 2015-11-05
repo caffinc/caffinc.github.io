@@ -26,7 +26,8 @@ Deploying the jar using the plugin was straightforward. I configured the project
 In bash, you can access the PID of the last executed command using `$!`  
 We add transfer sets to execute commands to kill the previously running process, copy the jar, and start a new process. However, this is not as straightforward as you&#8217;d think. I ran this script to run the jar and store the pid in a file called `xyz.pid`:
 
-```#!/bin/bash
+```
+#!/bin/bash
 nohup /usr/bin/java -jar /var/lib/xyz/xyz.jar &
 echo $! >> /var/lib/xyz/xyz.pid
 ```
@@ -35,7 +36,8 @@ The first line is just to indicate that this is a bash script, I&#8217;m not sur
 
 Now that the PID is getting written to a file, I add a transfer set **before** this one to stop the running process using the PID from the file, and delete the xyz.pid file:
 
-```#!/bin/bash
+```
+#!/bin/bash
 FILE=/var/lib/xyz/xyz.pid
 if [ -f "$FILE" ];
 then
@@ -54,7 +56,8 @@ I tried several more combinations of scripts, and eventually I realized that the
 
 I now changed the exec script to this:
 
-```#!/bin/bash
+```
+#!/bin/bash
 nohup /usr/bin/java -jar /var/lib/xyz/xyz.jar &#038;
 echo $! >> /var/lib/xyz/xyz.pid
 sleep 1
