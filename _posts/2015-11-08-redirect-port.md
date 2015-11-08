@@ -1,5 +1,5 @@
 ---
-title: Redirect A Port or Socket
+title: Redirect a Port or Socket
 author: admin
 layout: post
 permalink: /2015/11/redirect-port/
