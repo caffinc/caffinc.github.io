@@ -6,13 +6,13 @@ permalink: /2015/11/what-is-my-ip/
 categories:
   - Java
 tags:
-  - web
-  - sockets
-  - ports
-  - redirect
+  - java
+  - ip
+  - ip address
+  - code
 ---
 
-I wanted a simple, free, no-limits way of finding out my own public IP. I also wanted a way to use it in my Java code so I wouldn't need a really complex, and non-guaranteed way of finding the IP.
+I wanted a simple, free, no-limits way of finding out my own public IP. I also wanted a way to use it in my Java code so I wouldn't need a really complex, and non-guaranteed way of finding the IP. I can't believe the number of times I've searched for "How to get my public IP in Java?" or several variations of the same and I was tired of it. 
 
 I wrote a simple server which has one endpoint which returns the IP address of the called. It's a no-frills service currently hosted here:
 [https://caffinc.com/myip](https://caffinc.com/myip)
