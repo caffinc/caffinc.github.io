@@ -70,3 +70,14 @@ Close but still no cigar... I decided to use the `IMAGE ID` instead (In this cas
     root@881b2215b26b:/#
 
 w00t w00t! It seems to have worked! Now to start playing around with `TensorFlow`! Hope this helps people on Windows and Docker who can't get it to work as described!
+
+---
+*edit (12 Nov 2015):*
+
+I got a few emails from people asking me if I managed to get things to work. The answer is Yes. You need to use the Docker Quickstart Terminal and start the TensorFlow image as described above. Once you're in the TensorFlow shell, you can type `python` to start Python on it, and run your Python code inside it.
+
+I've tried out a few samples from the [TensorFlow Basic Usage page](http://tensorflow.org/get_started/basic_usage.md) so far, and they all seem to work. Here's a screenshot:
+
+![Docker running TensorFlow](http://caffinc.com/wp-content/uploads/2015/11/docker-tensorflow.png)
+
+Good luck with your experimentation!
