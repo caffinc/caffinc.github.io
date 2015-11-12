@@ -3,6 +3,7 @@ title: TensorFlow on Windows
 author: admin
 layout: post
 permalink: /2015/11/tensorflow-windows/
+comments: true
 categories:
   - TensorFlow
   - Windows
