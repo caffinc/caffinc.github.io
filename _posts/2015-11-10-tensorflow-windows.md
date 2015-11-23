@@ -48,7 +48,7 @@ Well, that's great. I searched for a solution and found that there was a bug wit
     Unable to find image 'b.gcr.io\tensorflow\tensorflow:latest' locally
     repository name component must match "[a-z0-9](?:-*[a-z0-9])*(?:[._][a-z0-9](?:-*[a-z0-9])*)*"
 
-*Come on...* This made no sense. Why was it trying to find it locally? And why wouldn't it download from a remote location? The repository name was from Google and it was obviously tested! (Right?) I opened up the [repository URL](b.gcr.io/tensorflow/tensorflow) in my browser and it gave me a `404`.
+*Come on...* This made no sense. Why was it trying to find it locally? And why wouldn't it download from a remote location? The repository name was from Google and it was obviously tested! (Right?) I opened up the repository URL (b.gcr.io/tensorflow/tensorflow) in my browser and it gave me a `404`.
 
 I thought "Well, let me just `pull` the repository to see if that works..." and it did!
 
@@ -64,7 +64,7 @@ Now I tried starting it again using `winpty docker run -it b.gcr.io/tensorflow/t
     Unable to find image 'b.gcr.io\tensorflow\tensorflow:latest' locally
     repository name component must match "[a-z0-9](?:-*[a-z0-9])*(?:[._][a-z0-9](?:-*[a-z0-9])*)*"
 
-Close but still no cigar... I decided to use the `IMAGE ID` instead (In this case, `217daf2537d2`:
+Close but still no cigar... I decided to use the `IMAGE ID` instead (In this case, `217daf2537d2`):
 
     $ winpty docker run -it 217daf2537d2
     root@881b2215b26b:/#
