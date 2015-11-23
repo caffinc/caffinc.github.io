@@ -12,8 +12,10 @@ tags:
   - adapter
   - virtualbox
   - hostinterfacenetworking
+  - windows
+  - november
 ---
-I recently installed the November Windows 10 update on my computer, and while everything went smoothly, my `VirtualBox` went belly-up.
+I recently installed the [November Windows 10 update](http://blogs.windows.com/windowsexperience/2015/11/12/first-major-update-for-windows-10-available-today/) on my computer, and while everything went smoothly, my `VirtualBox` went belly-up.
 
 I *knew* there would be something wrong with VirtualBox even before I started it but when I started up the `Docker Quickstart Terminal` and it exited with an error, my fears were confirmed.
 
