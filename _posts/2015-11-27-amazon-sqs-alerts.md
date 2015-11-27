@@ -16,6 +16,7 @@ tags:
   - alerts
 ---
 <img src="http://caffinc.com/wp-content/uploads/2015/11/amazon-aws-logo.png" alt="Amazon AWS Logo" style="width: 200px;"/><img src="http://caffinc.com/wp-content/uploads/2015/11/amazon-sqs-logo.png" alt="Amazon AWS Logo" style="width: 100px;"/>
+
 [Amazon AWS](https://aws.amazon.com "Amazon AWS") is pretty cool, and everyone knows that. Recently my manager asked me to look at `Amazon SQS` for our alerts and notifications.
 
 I searched on the [official SQS site](https://aws.amazon.com/sqs/ "Amazon SQS official site") for documentation and found a link to their [GitHub page](https://github.com/aws/aws-sdk-java/tree/master/src/samples/AmazonSimpleQueueService "Amazon SQS GitHub example") which had a Java example.
