@@ -73,4 +73,3 @@ I finally realized that this was a problem with the version of `Apache HTTP Clie
     [INFO] ------------------------------------------------------------------------
 
 We updated her code to use `v4.3.6` instead and everything worked just fine! Hope this helps someone else in need!
- 
