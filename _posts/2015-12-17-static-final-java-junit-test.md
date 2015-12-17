@@ -74,6 +74,7 @@ This is because during compilation, your compiled decided to replace `System.out
 You can overcome this behavior by setting the value of the `static final` field using a method such as:
 
     public static final String TEST = PropertyFileReader.getProperty("TEST");
+
 This prevents the compiler from optimizing the code, allowing you to tinker with it using Reflection.
 
 #Statiflex:
