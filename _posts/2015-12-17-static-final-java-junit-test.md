@@ -23,6 +23,7 @@ tags:
 Reflection is like being handed a master-key. I've used it to come up with solutions to problems that didn't have an easier or cleaner way in Java - cutting down cumbersome code writing.
 
 Minor disclaimer:
+
 #Don't do this! You might open Pandora's Box.
 
 If you still want to go ahead, read on.
