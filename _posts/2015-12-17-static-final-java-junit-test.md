@@ -57,7 +57,26 @@ Somehow I wasn't able to use the `getField()` method for this, and had to use th
     modifiersField.setAccessible( isModifierAccessible );
 Might not be very useful resetting the value, really. The harm is already done.
 
-If you don't want to do it yourself, and tell people you "found a library on the Internet that does it", here's a link to my repository containing a jar that will let you do the same: [Statiflex](https://github.com/caffinc/statiflex/releases/tag/1.0 "Statiflex")
+**Note:** Compilers optimize constants by replacing them inline, which will make changing the constant useless. For example, assume `changeField` is our method which changes the `static final` field `TEST` of Class `clazz`:
+
+    public static final String TEST = "Hello";
+
+    public static void main( String[] args )
+    {
+        System.out.println( TEST ); // prints "Hello"
+        changeField( clazz, "TEST", "hi!" );
+        System.out.println( TEST ); // prints "Hello"
+    }
+
+This is because during compilation, your compiled decided to replace `System.out.println( TEST );` with `System.out.println( "Hello" );`
+
+You can overcome this behavior by setting the value of the `static final` field using a method such as:
+
+    public static final String TEST = PropertyFileReader.getProperty("TEST");
+This prevents the compiler from optimizing the code, allowing you to tinker with it using Reflection.
+
+#Statiflex:
+If you don't want to do it yourself, and instead tell people you "found a library on the Internet that does it", here's a link to my repository containing a jar that will let you do the same: [Statiflex](https://github.com/caffinc/statiflex/releases/tag/1.0 "Statiflex")
 
 You can add it as a Maven dependency like this:
 
@@ -68,12 +87,16 @@ You can add it as a Maven dependency like this:
         <scope>system</scope>
         <systemPath>${project.basedir}/src/main/resources/jars/statiflex-1.0.jar</systemPath>
     </dependency>
-My project depends on `SLF4J` with `Log4j`:
+`Statiflex` depends on `SLF4J` with `Log4j`:
 
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-log4j12</artifactId>
-        <version>${slf4j-version}</version>
+        <version>1.7.12</version>
     </dependency>
+
+Usage:
+
+    boolean success = Statiflex.flex(MyClass.class, "MY_STATIC_FINAL_FIELD", "NEW VALUE");
 
 Feel free to tinker with my code and use it in your projects. Don't blame me if you end up with issues :) Happy hacking!
