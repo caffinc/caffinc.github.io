@@ -1,5 +1,5 @@
 ---
-title: Distributed Thinking: A gentle introduction to distributed processing using Apache Storm and Apache Spark 
+title: "Distributed Thinking: A gentle introduction to distributed processing using Apache Storm and Apache Spark" 
 author: admin
 layout: post
 permalink: /2015/12/distributed-thinking-storm-spark/
