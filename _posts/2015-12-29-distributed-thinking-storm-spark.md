@@ -86,7 +86,7 @@ These data stores can be broadly split into two types of processing strategies:
 * Batch - Databases and flat files
 * Real-Time - Streams like Twitter Firehose, Kafka, Message queues, etc.
 
-Traditionally, Spark is more suited for Batch processing, and Storm is suited for  real-time processing, but both can do either type of processing, and what you actually end up using is a matter of preference.
+Traditionally, <b>Spark is more suited for Batch processing, and Storm is suited for  real-time processing</b>, but both can do either type of processing, and what you actually end up using is a matter of preference.
 
 
 <a name="xt"></a>
@@ -96,14 +96,34 @@ Depending on the type of raw data your system has to process, there are a few st
 <a name="1_2_2_1_as_is"></a>
 
 1. Use data as-is:<br>
-To do this, your `XT` method would have a connector which connects to the DS and provides a cursor for the data, filters to clean up the data as it arrives from the raw source, and data parsers to convert the data into the structure expected by the `Transform` methods downstream. You would mix and match several parsers and filters here, trying to achieve the fastest, cleanest way to get the data to transform.
+To do this, your `XT` method would have a connector which connects to the DS and provides a cursor for the data, filters to clean up the data as it arrives from the raw source, and data parsers to convert the data into the structure expected by the `Transform` methods downstream. You would mix and match several parsers and filters here, trying to achieve the fastest, cleanest way to get the data to transform.<br>
+Some Data Stores might already provide clean data that can be used as-is, like Twitter or Kafka. If you need to process this in real-time, a Storm solution might make more sense.
 
 2. Transform data into a smaller, or better local data store:<br>
 Your data might not arrive at convenient intervals, or it might make sense to only process your data periodically, and not as it arrives. If this is the case, it makes sense to read the raw data source when the data is made available, and store it locally to be processed when it's time.<br>
-Your secondary store could be a smaller, and more curated (using methods mentioned in [(1)](#1_2_2_1_as_is) above) as you might only want specific parts of the data. You can also use this process to store the data from a raw format such as Flat files and logs on FTP, into a better format, like a Database, or HDFS. 
+Your secondary store could be a smaller, and more curated (using methods mentioned in [(1)](#1_2_2_1_as_is) above) as you might only want specific parts of the data. You can also use this process to store the data from a raw format such as Flat files and logs on FTP, into a better format, like a Database, or HDFS. A Spark solution might make more sense to process this data.
+
+Now that the data has been extracted from the raw Data Store `DS`, you can use it in the `Transform` step using either <b>`RDDs` in `Spark`, or `Spouts` in `Storm`</b>.
 
 <a name="tr"></a>
-<h4>3. Transform TR</h4>
+<h4>1.2.3 Transform TR</h4>
+Now if you need a real-time solution, `Storm` may be the way forward. If you need a batched processing solution, `Spark` may be the way forward.
 
+Pick whichever one you think would be faster for you to develop, and whichever is easier to maintain.
+
+<a name="ld"></a>
+<h4>1.2.4 Load LD</h4>
+The choice of your Data Sink `SNK` would affect the way you write your `LD`, but more on that later.
+
+<a name="snk"></a>
+<h4>1.2.5 Data Sink SNK</h4>
+Your final output gets written to the final form from which it's possible to generate any kind of results you want:
+
+1. Report Generation
+2. Page Generation
+3. Data Insights
+
+Your output might be to a database, or to files, or to a web service. We'll discuss more about this later.
+   
 ***
 Work in progress, please check back later
