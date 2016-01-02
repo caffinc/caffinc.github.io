@@ -61,8 +61,51 @@ When the amount of data coming in from the Data Store is huge, and there's a con
 
 Do you have data that's in the order of several GBs or TBs (or PBs) that has to be processed as soon as possible, maybe even instantly? That's your cue to make your system fit into the ETL model, and write a distributed `Transform` stage.
 
+Often systems like Spark and Storm take time to start up, along with the overhead of actually setting up a distributed cluster. If the advantages that distributed processing brings do not outweigh the disadvantages of the infrastructure and the small processing overhead that exists, you should probably reconsider - I have found that sometimes just a multithreaded implementation in Java was more than enough.
+
 <h3>Where to start?</h3>
-   
+Now that you know when it makes sense to use a distributed system, the question is - Where do you begin?
+
+Let's take a step back and look at our `ETL` system. It is divided into 5 parts - the `Data Store` or `Data Warehouse` (Let's call it `DS`), the `Extract` method (`XT`), the `Transform` process (`TR`), the `Load` method (`LD`) and the `Data Sink` (`SNK`).
+
+    DS ---(XT)---> TR ---(LD)---> SNK
+
+Focus on each of these components now:
+<a name="ds"></a>
+<h4>1. Data Store DS</h4>
+The DS is the source. There can be several ways in which our system ingests the data. Let's look at the most common ones:
+
+* Relational Databases
+* NoSQL Databases
+* Data Streams
+* Logs and Flatfiles
+
+![Data Store Types](http://caffinc.com/wp-content/uploads/2016/01/DataStoreTypes.png)
+
+These data stores can be broadly split into two types of processing strategies:
+
+1. Batch - Databases and flat files
+2. Real-Time - Streams like Twitter Firehose, Kafka, Message queues, etc.
+
+Traditionally, Spark is more suited for Batch processing, and Storm is suited for  real-time processing, but both can do either type of processing, and what you actually end up using is a matter of preference.
+<a name="xt"></a>
+<h4>2. Extract XT</h4>
+Depending on the type of raw data your system has to process, there are a few strategies you can use to `Extract` the data:
+
+<a name="1_as_is"></a>
+
+1. Use data as-is
+
+  To do this, your `XT` method would have a connector which connects to the DS and provides a cursor for the data, filters to clean up the data as it arrives from the raw source, and data parsers to convert the data into the structure expected by the `Transform` methods downstream. You would mix and match several parsers and filters here, trying to achieve the fastest, cleanest way to get the data to transform.
+
+2. Transform data into a smaller, or better local data store
+
+  Your data might not arrive at convenient intervals, or it might make sense to only process your data periodically, and not as it arrives. If this is the case, it makes sense to read the raw data source when the data is made available, and store it locally to be processed when it's time.
+
+  Your secondary store could be a smaller, and more curated (using methods mentioned in [(1)](#1_as_is) above) as you might only want specific parts of the data. You can also use this process to store the data from a raw format such as Flat files and logs on FTP, into a better format, like a Database, or HDFS. 
+
+<a name="tr"></a>
+<h4>3. Transform TR</h4>
 
 ***
 Work in progress, please check back later
