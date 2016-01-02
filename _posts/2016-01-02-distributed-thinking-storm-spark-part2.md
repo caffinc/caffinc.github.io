@@ -34,10 +34,22 @@ The Load method `LD` is the `System.out.println` method which prints the `lineCo
 
 Let's break this program into blocks:
 
-Let's look at a slightly more complex example - Word count. 
+![Line Count](http://caffinc.com/wp-content/uploads/2016/01/LineCount.png)
+
+The `Connector` block is responsible for getting the data from the underlying system.<br>
+The `Distributed Transformation Code` block takes the list of lines Line 0 to Line (N-1) and transforms it into a number `1` and then sums it up to `N`, which is the number of lines in the file.<br>
+The `Output` block is responsible for delivering the result to the output system, which may be a Data Sink `DS` or the screen.
+
+Let's look at a slightly more complex example in blocks - Word count:
+
+![Word Count](http://caffinc.com/wp-content/uploads/2016/01/WordCount.png)
+
+Here the `Connector` and the `Output` remain the same, with the `Connector` reading out of a file line by line, and the `Output` printing out the result onto the screen.
+
+ 
+
 ***
 Work in progress, please check back later
-
 
 ----
 
