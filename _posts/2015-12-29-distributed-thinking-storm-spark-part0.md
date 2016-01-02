@@ -39,4 +39,10 @@ This is meant to be a starting point for people new to the whole concept of dist
 
 -------------
 
-Click here to go to the first part - [Distributed Thinking](/2016/01/distributed-thinking-storm-spark-part1 "Distributed Thinking")
+Click here to go to the first part - [Part 1: When and Where](/2016/01/distributed-thinking-storm-spark-part1 "Part 1: When and Where")
+
+
+Click on any of the links below to go directly to any part:<br>
+[Part 0: Introduction](/2016/01/distributed-thinking-storm-spark-part0 "Part 0")<br>
+[Part 1: When and Where](/2016/01/distributed-thinking-storm-spark-part1 "Part 1")<br>
+[Part 2: How to look at data](/2016/01/distributed-thinking-storm-spark-part2 "Part 2")<br>
