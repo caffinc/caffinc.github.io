@@ -31,23 +31,23 @@ This is meant to be a starting point for people new to the whole concept of dist
 
 <h3>What I plan to talk about:</h3>
 
-* Distributed Thinking
-    * When to use it?
-    * Where to start?
-    * How to look at data?
-* Processing Data Streams
-* Processing Large Data Chunks
+1. Distributed Thinking
+    1. When to use it?
+    2. Where to start?
+    3. How to look at data?
+2. Processing Data Streams
+3. Processing Large Data Chunks
 
 --------------------------------------------------------------------
 
-Distributed Thinking
-====================
+1. Distributed Thinking
+=======================
 
 When I first started processing large amounts of data for a project I worked on which involved data from TV viewers (A lot of logs that set-top boxes throw up), I didn't quite understand what "large" amounts of data meant. I had only worked on datasets involving a few thousand records, stretching up to a million at max.
 
 When a colleague of mine wrote a solution to the project using Storm, I didn't quite understand all the moving parts. I was still learning how to code better than the average fresh-out-of-college-computer-science-student, and everything looked complex and alien to me. I have since discovered that if you focus on something long enough, and tear it down into smaller parts, everything is easy! I hope to bring some of my understanding into this blog to make it easier for people new to this kind of data.
 
-<h3>When to use it?</h3>
+<h3>1.1 When to use it?</h3>
 
 Suppose you have a data set that you need to perform some actions upon. Nearly all problems involving data can be broken into an `ETL` process - `Extract`, `Transform` and `Load`:
 
@@ -63,7 +63,7 @@ Do you have data that's in the order of several GBs or TBs (or PBs) that has to 
 
 Often systems like Spark and Storm take time to start up, along with the overhead of actually setting up a distributed cluster. If the advantages that distributed processing brings do not outweigh the disadvantages of the infrastructure and the small processing overhead that exists, you should probably reconsider - I have found that sometimes just a multithreaded implementation in Java was more than enough.
 
-<h3>Where to start?</h3>
+<h3>1.2 Where to start?</h3>
 Now that you know when it makes sense to use a distributed system, the question is - Where do you begin?
 
 Let's take a step back and look at our `ETL` system. It is divided into 5 parts - the `Data Store` or `Data Warehouse` (Let's call it `DS`), the `Extract` method (`XT`), the `Transform` process (`TR`), the `Load` method (`LD`) and the `Data Sink` (`SNK`).
@@ -71,8 +71,9 @@ Let's take a step back and look at our `ETL` system. It is divided into 5 parts 
     DS ---(XT)---> TR ---(LD)---> SNK
 
 Focus on each of these components now:
+
 <a name="ds"></a>
-<h4>1. Data Store DS</h4>
+<h4>1.2.1 Data Store DS</h4>
 The DS is the source. There can be several ways in which our system ingests the data. Let's look at the most common ones:
 
 * Relational Databases
@@ -84,25 +85,23 @@ The DS is the source. There can be several ways in which our system ingests the 
 
 These data stores can be broadly split into two types of processing strategies:
 
-1. Batch - Databases and flat files
-2. Real-Time - Streams like Twitter Firehose, Kafka, Message queues, etc.
+* Batch - Databases and flat files
+* Real-Time - Streams like Twitter Firehose, Kafka, Message queues, etc.
 
 Traditionally, Spark is more suited for Batch processing, and Storm is suited for  real-time processing, but both can do either type of processing, and what you actually end up using is a matter of preference.
-<a name="xt"></a>
-<h4>2. Extract XT</h4>
+
+
+<a name="xt"></a><h4>1.2.2 Extract XT</h4>
 Depending on the type of raw data your system has to process, there are a few strategies you can use to `Extract` the data:
 
-<a name="1_as_is"></a>
+<a name="1_2_2_1_as_is"></a>
 
-1. Use data as-is
+1. Use data as-is:<br>
+To do this, your `XT` method would have a connector which connects to the DS and provides a cursor for the data, filters to clean up the data as it arrives from the raw source, and data parsers to convert the data into the structure expected by the `Transform` methods downstream. You would mix and match several parsers and filters here, trying to achieve the fastest, cleanest way to get the data to transform.
 
-  To do this, your `XT` method would have a connector which connects to the DS and provides a cursor for the data, filters to clean up the data as it arrives from the raw source, and data parsers to convert the data into the structure expected by the `Transform` methods downstream. You would mix and match several parsers and filters here, trying to achieve the fastest, cleanest way to get the data to transform.
-
-2. Transform data into a smaller, or better local data store
-
-  Your data might not arrive at convenient intervals, or it might make sense to only process your data periodically, and not as it arrives. If this is the case, it makes sense to read the raw data source when the data is made available, and store it locally to be processed when it's time.
-
-  Your secondary store could be a smaller, and more curated (using methods mentioned in [(1)](#1_as_is) above) as you might only want specific parts of the data. You can also use this process to store the data from a raw format such as Flat files and logs on FTP, into a better format, like a Database, or HDFS. 
+2. Transform data into a smaller, or better local data store:<br>
+Your data might not arrive at convenient intervals, or it might make sense to only process your data periodically, and not as it arrives. If this is the case, it makes sense to read the raw data source when the data is made available, and store it locally to be processed when it's time.<br>
+Your secondary store could be a smaller, and more curated (using methods mentioned in [(1)](#1_2_2_1_as_is) above) as you might only want specific parts of the data. You can also use this process to store the data from a raw format such as Flat files and logs on FTP, into a better format, like a Database, or HDFS. 
 
 <a name="tr"></a>
 <h4>3. Transform TR</h4>
