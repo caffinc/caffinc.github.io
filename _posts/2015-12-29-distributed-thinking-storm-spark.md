@@ -124,6 +124,11 @@ Your final output gets written to the final form from which it's possible to gen
 3. Data Insights
 
 Your output might be to a database, or to files, or to a web service. We'll discuss more about this later.
-   
+
+<h3>1.3 How to look at data?</h3>
+As discussed before, our primary goal is to transform the data into the form that we need. Let us take a classic example of counting lines in a text file, starting with a simple version using Java:
+
+{% gist c44b1019d85791ac01c3 %}
+
 ***
 Work in progress, please check back later
