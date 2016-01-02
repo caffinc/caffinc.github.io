@@ -20,8 +20,7 @@ tags:
 
 <img src="http://spark.apache.org/images/spark-logo-trademark.png" alt="Apache Spark Logo" style="height: 100"/><img src="http://storm.apache.org/images/logo.png" alt="Apache Storm Logo" style="height: 100"/>
 
-Introduction
-============
+<h1>0. Introduction</h1>
 
 This post is meant to serve as a starting point for people using Java or Scala to process large amounts of data, and need a quick introduction to how to do it - either in Spark or in Storm.
 
@@ -40,8 +39,7 @@ This is meant to be a starting point for people new to the whole concept of dist
 
 --------------------------------------------------------------------
 
-1. Distributed Thinking
-=======================
+<h1>1. Distributed Thinking</h1>
 
 When I first started processing large amounts of data for a project I worked on which involved data from TV viewers (A lot of logs that set-top boxes throw up), I didn't quite understand what "large" amounts of data meant. I had only worked on datasets involving a few thousand records, stretching up to a million at max.
 
@@ -91,7 +89,8 @@ These data stores can be broadly split into two types of processing strategies:
 Traditionally, Spark is more suited for Batch processing, and Storm is suited for  real-time processing, but both can do either type of processing, and what you actually end up using is a matter of preference.
 
 
-<a name="xt"></a><h4>1.2.2 Extract XT</h4>
+<a name="xt"></a>
+<h4>1.2.2 Extract XT</h4>
 Depending on the type of raw data your system has to process, there are a few strategies you can use to `Extract` the data:
 
 <a name="1_2_2_1_as_is"></a>
