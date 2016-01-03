@@ -137,6 +137,12 @@ To be able to process your code in a distributed way, the following pointers wil
 
 Often, the reason for an unreliable system yielding non-deterministic results (Different runs of the same data yields different results) is because either the data is mutable or the functions have side effects.
 
+In the example above with the line counting, Transformation method `transform2` is not free of side effects as it modifies the counter that is passed to it, which means that `transform2` cannot be reliably used in a distributed environment.
+
+In most problems, the final step of `collecting` the data into the data sink is not straight forward. Hence, Spark and Storm both provide means to collect the data in such a way that all the results of the previous step is grouped together on one machine in the end. This step is also called `Reduce` in the `Map-Reduce` terminology. 
+
+How to write these `collectors` and `sinks` for a distributed environment will be discussed later. 
+
 --------
 
 In the next post, let's look at a more complex example, Word Count. [Click here to continue reading.](/2016/01/distributed-thinking-storm-spark-part3 "Part 3")
