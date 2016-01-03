@@ -59,7 +59,7 @@ Now to convert this to a multi-threaded application, the `map` portion needs to 
 
 The map method is executed in multiple threads. We need a Queue that facilitates the delivery of the data to the mutliple threads with thread safety. The reduce method is out of these n threads to indicate that it runs on one machine and all data is collected into one final step. In reality, this might not be the case, and the reduction might happen in multiple threads and the data finally returned to the main thread. Let's look at the code:
 
-{% gist be8f6dfbbf999cd87c18 }
+{% gist be8f6dfbbf999cd87c18 %}
 
 Here we have a `main` method which reads from the FileIterator and dumps all the data into the `dataQueue`. It then stars an `ExecutorService` with a few threads which perform Transformations by reading from the `dataQueue` and write the final result into a `counter`.
 
