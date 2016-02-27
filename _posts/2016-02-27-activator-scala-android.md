@@ -33,8 +33,7 @@ Let me break this post down to smaller parts so you can pick up where you are:
 
 What motivated me to write this post was mostly point #5, so I'll be as quick as I can with the other details.
 
-1. Setting up IntelliJ to develop in Scala
-==========================================
+<h2>1. Setting up IntelliJ to develop in Scala</h2>
 
 IntelliJ IDEA is one of those IDEs that has made me enjoy developing on Java. I was primarily a C# developer spoiled on Visual Studio's quick, clean and powerful environment. Developing on Eclipse annoyed me as it would be a memory hog requiring frequent restarts (At least for me on my setup. YMMW.)
 
@@ -48,8 +47,7 @@ That is all. This will download all required dependencies on the fly as you crea
 
 You would still have to download `SBT` from [here and install it](http://www.scala-sbt.org/download.html "SBT Downloads"). **Make sure you install it to some location that doesn't have spaces in the path.** I cannot stress this enough because some libraries have a tough time working with paths with spaces in them. Now add `SBT` to your path and you should be ready to do all your Scala work for now.
 
-2. Installing Android SDKs
-==========================
+<h2>2. Installing Android SDKs</h2>
 
 While Android Studio is a great way to get started on Android development, I'm not sure how good it is for Scala in particular. Going to IntelliJ + Scala route was the one I thought made more sense, you might want to do it differently.
 
@@ -86,8 +84,7 @@ After installing the SDK from the downloaded installer, you will have to start t
 
 Do you need all of these? Probably not. Do you need any of these? Yes. Which ones? God knows - I've managed to get everything working with all these installed and I'm going to stick with it. Some things, like the Documentation and Google APIs, are not necessary just to build an Android app. Google APIs are used to make some Google specific services available to your app, but your app might not need them at all.
 
-3. Installing required plugins
-==============================
+<h2>3. Installing required plugins</h2>
 
 The worst is nearly done. In the process of wanting to pull my hair out after creating multiple projects with the provided templates for Android and Scala, I finally went on Freenode and asked the #scala channel in large if anyone had done this before.
 
@@ -101,8 +98,7 @@ The `~` is your user profile directory, usually `C:\Users\<user>\` directory. Cr
 
 That is all! Now you're set to create an Android app in Scala!
 
-4. Creating your first app
-==========================
+<h2>4. Creating your first app</h2>
 
 <h3>Using Activator:</h3>
 
@@ -118,8 +114,7 @@ You can also create an app from the command line using:
 
 But this will generate an SBT-backed Java Android application. You can run this by opening the SBT shell and typing `android:run`. Import the project into IntelliJ and convert the Java code to Scala as appropriate. (This is the advice given to me by people who've probably done this before. But I couldn't get it to work for me as easily. I stuck to the Activator Template method above.)
 
-5. Troubleshooting
-==================
+<h2>5. Troubleshooting</h2>
 
 Now let's stop dreaming about things working smoothly and come to the real world of pain. There are several things that don't work properly with the above mentioned scenario.
 
@@ -155,8 +150,7 @@ Try to create a new Android project using just SBT and see if that helps. You ca
 
 This will create a new project right in the location the command was run. Now launch SBT there using `sbt` and run your project using `android:run`. This will download a bunch of dependencies if any were missing and should start the project for you.
 
-6. Conclusion
-=============
+<h2>6. Conclusion</h2>
 
 You must *really* want to develop things in Scala if you took this route. "It works, BUT AT WHAT COST!?" I hear you shout. That's a journey I haven't completed yet. If you think you're great at Scala, then this is probably a great option for you. The cost is entirely dependent on you.
 
