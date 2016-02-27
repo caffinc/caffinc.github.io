@@ -41,7 +41,7 @@ IntelliJ IDEA is a great IDE to write Scala code in, and a great place to get st
 
 Install IntelliJ IDEA from [here](https://www.jetbrains.com/idea/download/#section=windows "IntelliJ IDEA Downloads") (You only need the Community edition, but feel free to buy the Ultimate edition instead). Once you have that installed, one of the first things you're prompted to is to install Scala, which is one of the most popular plugins on IntelliJ. If you missed your chance there, you can also install IntelliJ by going to your `File > Settings`. Select the `Plugins` option on the left and then click the `Install JetBrains plugin...` button. In the pop-up window that shows up, select `Sort by: downloads`. `Scala` should be the first one. Or you can search for Scala as well.
 
-<img src="http://eng.trueaccord.com/wp-content/uploads/2014/10/scala-logo.png" alt="Scala Logo" style="height: 100"/><img src="http://s18.postimg.org/6gcq0qtih/intellij_idea_logo_400x400.png" alt="IntelliJ IDEA Logo" style="height: 100"/>
+<img src="http://eng.trueaccord.com/wp-content/uploads/2014/10/scala-logo.png" alt="Scala Logo" style="height: 100px"/><img src="http://s18.postimg.org/6gcq0qtih/intellij_idea_logo_400x400.png" alt="IntelliJ IDEA Logo" style="height: 100px"/>
 
 That is all. This will download all required dependencies on the fly as you create a new project. I did the mistake of downloading Scala directly and have suffered the consequences of multiple installations driving me slightly senile.
 
@@ -52,7 +52,7 @@ You would still have to download `SBT` from [here and install it](http://www.sca
 While Android Studio is a great way to get started on Android development, I'm not sure how good it is for Scala in particular. Going to IntelliJ + Scala route was the one I thought made more sense, you might want to do it differently.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Android_robot.png
-" alt="Android Logo" style="height: 100"/>
+" alt="Android Logo" style="height: 100px"/>
 
 Download the `SDK Tools Only` installer from [here](http://developer.android.com/sdk/index.html#Other "Android SDK"). Pick the one most appropriate for you.
 
