@@ -18,7 +18,7 @@ While testing some of our distributed systems, I wanted a quick way to generate 
 
 I thought this was an interesting problem to solve, and went about creating `Grex`, an open-source distributed simple CPU load generator written in Java. Grex comes from the Latin noun meaning "flock", or in this case, a group of load generators.
 
-You can grab it from here, but it might not be ready yet (I might still be working out the details). However, the core part of Grex is the `BusyThread`, a Java thread which corresponds to one CPU thread. I have made that code available below.
+You can grab it from [here](https://github.com/caffinc/grex "Grex"), but it might not be ready yet (I might still be working out the details). However, the core part of Grex is the `BusyThread`, a Java thread which corresponds to one CPU thread. I have made that code available below.
 
 <h1>Basic Idea</h1>
 
@@ -54,4 +54,4 @@ For example, you may have a process running that already occupies 10% of the CPU
 
 This system makes a best-attempt to generate the specified load on an unladen machine, but it might be a little inaccurate.
 
-I hope Grex or this code helps you in your testing!
+I hope Grex or this code helps you in your testing endeavours! Feel free to reach out to me if there's some issue with the code or if you'd like to contribute to Grex.
