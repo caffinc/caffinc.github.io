@@ -16,7 +16,7 @@ tags:
   - static
   - final
 ---
-#Reflection is a helluva drug
+# Reflection is a helluva drug
 
 `Reflection` allows you to tinker with Java in ways that are clearly against everything you've learnt from your Object Oriented Programming lessons.
 
@@ -24,7 +24,7 @@ Reflection is like being handed a master-key. I've used it to come up with solut
 
 Minor disclaimer:
 
-#Don't do this! You might open Pandora's Box.
+# Don't do this! You might open Pandora's Box.
 
 If you still want to go ahead, read on.
 
@@ -34,26 +34,26 @@ The solution came to me in the form of Reflection. Using Reflection, you can rea
 
 So, without further ado, the unethical way to edit `static final` fields in Java that makes people burned by Reflection wince, is as follows:
 
-###First, we get the `field` to tinker with:
+### First, we get the `field` to tinker with:
  
     Field field = clazz.getDeclaredField( fieldName );
 
 Somehow I wasn't able to use the `getField()` method for this, and had to use the `getDeclaredField()` method instead.
 
-###Next we modify the `field` using reflection to allow editing `final` fields (Sort of like self-immolation): 
+### Next we modify the `field` using reflection to allow editing `final` fields (Sort of like self-immolation): 
     Field modifiersField = Field.class.getDeclaredField( "modifiers" );
     boolean isModifierAccessible = modifiersField.isAccessible();
     modifiersField.setAccessible( true );
     modifiersField.setInt( field, field.getModifiers() & ~Modifier.FINAL );
 
-###Now we allow the field to be edited by setting the `accessible` field to true:
+### Now we allow the field to be edited by setting the `accessible` field to true:
     boolean isAccessible = field.isAccessible();
     field.setAccessible( true );
 
-###Now do the deed. Set the value to the `null` object to affect the `static` member:
+### Now do the deed. Set the value to the `null` object to affect the `static` member:
     field.set( null, value );
 
-###Clean up by changing the `accessible` field back:
+### Clean up by changing the `accessible` field back:
     field.setAccessible( isAccessible );
     modifiersField.setAccessible( isModifierAccessible );
 Might not be very useful resetting the value, really. The harm is already done.
@@ -77,7 +77,7 @@ You can overcome this behavior by setting the value of the `static final` field 
 
 This prevents the compiler from optimizing the code, allowing you to tinker with it using Reflection.
 
-#Statiflex:
+# Statiflex:
 If you don't want to do it yourself, and instead tell people you "found a library on the Internet that does it", here's a link to my repository containing a jar that will let you do the same: [Statiflex](https://github.com/caffinc/statiflex/releases/tag/1.0 "Statiflex")
 
 You can add it as a Maven dependency like this:
@@ -97,7 +97,7 @@ You can add it as a Maven dependency like this:
         <version>1.7.12</version>
     </dependency>
 
-Usage:
+### Usage:
 
     boolean success = Statiflex.flex(MyClass.class, "MY_STATIC_FINAL_FIELD", "NEW VALUE");
 
