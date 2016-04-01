@@ -1,5 +1,5 @@
 ---
-title: "Simple Threadpool in Java"
+title: "Writing your own Threadpool from scratch in Java"
 author: admin
 layout: post
 permalink: /2016/03/simple-threadpool/
