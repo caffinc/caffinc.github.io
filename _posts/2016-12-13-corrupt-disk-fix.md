@@ -22,5 +22,5 @@ I wanted to clean up the MicroSD card after playing around, and since Windows do
 
 On my third attempt however I was a bit careless with using diskpart, and called the `delete partition` command on the ext4 partition instead of just calling the `clean` command on the disk. The window just froze for a while. After waiting for a few minutes, my patience ran out. I killed the diskpart process and tried starting again. Well... it wouldn't start.
 
-![](../images/diskpart_frozen.png)
+![Frozen Diskpart](https://caffinc.github.io/images/diskpart_frozen.png)
 
