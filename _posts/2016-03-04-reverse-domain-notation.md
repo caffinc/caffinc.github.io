@@ -16,7 +16,7 @@ tags:
   - bson
 ---
 
-<img src="https://www.mongodb.com/assets/MongoDB_Brand_Resources/MongoDB-Logo-7db53b4037f9953e9df4f694c758141fcfa022cee1d2ff50749d133d0b70b692.jpg" alt="MongoDB Logo" style="height: 100px"/>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1280px-MongoDB-Logo.svg.png" alt="MongoDB Logo" style="height: 100px"/>
 
 I've been trying to wrap my head around getting my jar into Maven Central. The process used to be easier, and now it's a lot of paperwork and fineprint.
 
