@@ -12,7 +12,8 @@ tags:
 ---
 
 # The Requirement behind the requirement
-## *Or why your manager seems so anal-retentive*
+
+*Or why your manager seems so anal-retentive*
 
 For as far as I can remember, I have been very, _very_, **_very_** careful about presentation when it comes to things I do on a computer. Strangely this affinity towards perfection does not always extend beyond computer screens.
 
