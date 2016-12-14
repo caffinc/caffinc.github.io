@@ -3,4 +3,5 @@ email: admin@caffinc.com
 description: Caffeine Induced Code and Ramble
 github_username: caffinc
 url: https://caffinc.github.io
-
+gems:
+  - jekyll-feed
