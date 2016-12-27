@@ -32,7 +32,7 @@ After playing around a while, I've come up with the set of steps you need to fol
 2. 8GB MicroSD card
 3. Card reader
 4. Power Supply for the Pi 
-5. 8GB USB Stick (Optional)
+5. 4GB USB Stick (Optional)
 6. Internet
 
 ## Steps
@@ -47,9 +47,9 @@ If you're using Windows, you need `Win32DiskImager` to write the raspbian image 
 
 If you're on a Mac, [the official page might be your best resource.](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
-Since we're need our Pi to connect to the WiFi on boot, we need to configure some connection information into it before it starts up. Since `Win32DiskImager` creates an ext4 partition that doesn't work on Windows, you'll need a Linux machine, or VM to help you with making some changes to the files on your MicroSD card. I downloaded Tahrpup 6.0, [a Puppy Linux distro from here for that job](http://distro.ibiblio.org/puppylinux/puppy-tahr/iso/tahrpup%20-6.0-CE/). Look for the [tahr64-6.0.5.iso](http://distro.ibiblio.org/puppylinux/puppy-tahr/iso/tahrpup%20-6.0-CE/tahr64-6.0.5.iso) file. Puppy Linux provides a "live" ISO which doesn't need installation to run, and is pretty clean - doesn't leave junk on your disks. 
+Since we need our Pi to connect to the WiFi on boot, we need to configure some connection information into it before it starts up. Since `Win32DiskImager` creates an ext4 partition that doesn't work on Windows, you'll need a Linux machine, or VM to help you with making some changes to the files on your MicroSD card. I downloaded Tahrpup 6.0, [a Puppy Linux distro from here for that job](http://distro.ibiblio.org/puppylinux/puppy-tahr/iso/tahrpup%20-6.0-CE/). Look for the [tahr64-6.0.5.iso](http://distro.ibiblio.org/puppylinux/puppy-tahr/iso/tahrpup%20-6.0-CE/tahr64-6.0.5.iso) file. Puppy Linux provides a "live" ISO which doesn't need installation to run, and is pretty clean - doesn't leave junk on your disks. 
 
-Go ahead and download `unetbootin` as well, as you'll need it to create a bootable disk of your PuppyLinux if you don't want to run it as a VM. I have Hyper-V on my machine and it's a pain to get it to work with USB sticks.
+Go ahead and [download `unetbootin`](https://unetbootin.github.io/) as well, as you'll need it to create a bootable disk of your PuppyLinux if you don't want to run it as a VM. I have Hyper-V on my machine and it's a pain to get it to work with USB sticks.
 
 ### 2. Installing the image
 
@@ -57,11 +57,9 @@ The official page is pretty detailed on [how to install the image onto your SD c
 
 ### 3. Editing files on your MicroSD card
 
-Once you've installed your image on the MicroSD card, it should have two partitions. The first partition, which is in FAT32, is the `BOOT` partition. The second partition, which is in ext4, is the one which has your Raspbian OS files.
+Once you've installed your image on the MicroSD card, it should have two partitions. The first partition, which is in FAT32, is the `BOOT` partition. The second partition, which is in ext4, is the one which has your Raspbian OS files. If you're on a Linux machine, you should be able to see both partitions. If you're on Windows or Mac, you might not be able to access the second ext4 partition. This is where your Linux VM/Live disk comes into play.
 
-If you're on a Linux machine, you should be able to see both partitions on your MicroSD card when you plug it in. If you're on Windows or Mac, you might not be able to access the second ext4 partition. This is where your Linux VM/Live disk comes into play.
-
-If you're on a Windows machine, now's the time to [write your image onto the 8GB USB Stick using `unetbootin`.](https://unetbootin.github.io/) 
+If you're on a Windows machine, now's the time to [write your Linux image (Tahrpup) onto the 4GB USB Stick using `unetbootin`.](https://unetbootin.github.io/) 
 Boot into your machine from the USB stick now, which will run a "live" version of Puppy Linux, which doesn't write anything to your disks and merely runs on your RAM for as long as you want. If you have trouble booting into the USB stick, it might be because you have `Secure Boot` enabled. You need to go into your BIOS settings and disable `Secure Boot` and allow legacy booting. You'd have to Google for how to do it for your brand of PC Manufacturer.
 
 If you're on a Mac, you might have to Google how to create a bootable USB stick from an ISO and follow the appropriate steps, and then boot into the Linux installation.

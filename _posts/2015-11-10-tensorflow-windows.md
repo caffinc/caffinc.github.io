@@ -19,6 +19,23 @@ tags:
 ---
 ![TensorFlow Logo](http://tensorflow.org/images/logo-alt@2x.png)
 
+---
+edit (27 Dec 2016):
+
+Over a year later, I still see a few people looking at this post and it makes me feel good. Tensorflow now has native support on Windows so you should use that instead!
+
+You can get it using:
+
+    pip install --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-0.12.0rc0-cp35-cp35m-win_amd64.whl
+
+Official instructions can be found on the [TensorFlow website](https://www.tensorflow.org/get_started/os_setup#pip_installation).
+
+Also, my VPS which hosted the images that were on this page decided that it was a good idea to reset it without consulting with me. I lost a lot of my data and images in the process, which mean that some of the screenshots that were on this page no longer exist. I'm sorry about that.
+
+---
+## Original post:
+
+
 `TensorFlow` is the new machine learning library released by Google. I'm quite excited about it and can't wait to try it out.
 
 However, like most open-source software lately, it's not straight-forward to get it to work with Windows. I have a Windows 10 machine and enjoy coding on it immensely. Linux isn't quite for me at this moment, maybe in a year or two.
