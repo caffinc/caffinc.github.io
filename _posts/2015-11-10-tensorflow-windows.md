@@ -20,6 +20,18 @@ tags:
 ![TensorFlow Logo](http://tensorflow.org/images/logo-alt@2x.png)
 
 ---
+edit (16 Feb 2017):
+
+Google updated their URLs and TensorFlow's matured a little more. These are the latest instructions:
+
+1. Get [Python 3.5 x64](https://www.python.org/downloads/release/python-353/)
+2. Install TensorFlow using:
+
+    pip3 install --upgrade tensorflow
+    pip3 install --upgrade tensorflow-gpu
+
+You can find this info on the official [TensorFlow Windows Installation page](https://www.tensorflow.org/install/install_windows).
+
 edit (27 Dec 2016):
 
 Over a year later, I still see a few people looking at this post and it makes me feel good. Tensorflow now has native support on Windows so you should use that instead!
