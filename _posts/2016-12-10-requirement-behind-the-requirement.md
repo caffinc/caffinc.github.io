@@ -19,7 +19,7 @@ For as far as I can remember, I have been very, _very_, **_very_** careful about
 
 ![Logo doing what it does best](http://sydlexia.com/imagesandstuff/logo/square.png)
 
-The oldest memory I have of this is when I was first taught "programming" in `Logo`, a brilliant tool to get kids interested in coding, back in the second grade. Watching that turtle draw a staircase as it moved on my screen to my almost mechanical "FD 10 LT 90 FD 10 RT 10", and my classmate Alice remarking in amazement "Look at him typing his code. It's so methodical and perfect." almost made me feel like a rock star and it was magical. All around me were people struggling to find the right keys on the keyboard and here I was typing away like a pro. From that moment on I never wanted to be anything short of the guy who could do amazing things with a computer.
+The oldest memory I have of this is when I was first taught "programming" in `Logo`, a brilliant tool to get kids interested in coding, back in the second grade. Watching that turtle draw a staircase as it moved on my screen to my almost mechanical "FD 10 LT 90 FD 10 RT 90", and my classmate Alice remarking in amazement "Look at him typing his code. It's so methodical and perfect." almost made me feel like a rock star and it was magical. All around me were people struggling to find the right keys on the keyboard and here I was typing away like a pro. From that moment on I never wanted to be anything short of the guy who could do amazing things with a computer.
 
 My schooling in computer programming consisted of hundreds of programs that followed the following template:
 
