@@ -4,15 +4,19 @@ author: admin
 layout: post
 permalink: /2016/12/raspberry-pi-3-headless/
 categories:
-  - VPS
+  - Raspberry Pi
 tags:
-  - vps
-  - cheap
+  - raspberrypi
+  - linux
+  - ssh
 ---
 
 # Raspberry Pi 3 Truly Headless Setup
 
 ### A quick guide to getting your Raspberry Pi 3 running in headless mode with SSH and WiFi without a Keyboard, HDMI or Ethernet
+
+##### Edit [16th August, 2017 - I'm slow and lazy? :(]
+Since I made this blog, Raspberry Pi has had several updates, [and one of them makes it easier to set up a headless Pi without these many steps](https://www.raspberrypi.org/blog/another-update-raspbian/). Thanks [Bernhard Reinel](https://disqus.com/by/bernhardreinel/) for pointing this out in the comments.
 
 ## Motivation:
 
