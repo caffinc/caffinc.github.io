@@ -231,6 +231,11 @@ We now have the basic building blocks. Now let's look at the cement that holds i
 	            if (flag) {
 	                return;
 	            }
+	            try {
+	                Thread.sleep(1);
+	            } catch (InterruptedException e) {
+	                throw new ThreadpoolException(e);
+	            }
 	        }
 	    }
 	
