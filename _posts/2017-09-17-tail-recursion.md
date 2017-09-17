@@ -158,9 +158,15 @@ Here, the inner `def go` is the replacement of the original `factorial` method. 
 This prints:
 If that isn't a `BigInt`, I don't know what is.
 
-Your IDE might show you a hint that your method is tail call optimized:
+Your IDE might show you a hint that your method is tail recursive:
 
 ![Tail Call](https://caffinc.github.io/images/tail-call.png)
+
+You can also add an annotation in Scala to indicate that your method is `tail recursive`:
+
+```
+  @scala.annotation.tailrec
+```
 
 ### Conclusion
 
