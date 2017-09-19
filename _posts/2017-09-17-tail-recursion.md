@@ -150,7 +150,13 @@ So Bob, can we fix it? Yes we can! Let's look at a tail recursive version of `fa
     go(1, n)
   }
 ```
-Here, the inner `def go` is the replacement of the original `factorial` method. Look at the body of the method - the first branch is the value `acc`. The second branch is a call to itself which *does not have to return back to this point to do any further calculations*. So essentially the caller of `go` can fire-and-forget. The compile can now optimize this `tail call` into a `while loop` which eliminates the need for a stack to store the current state. If the compiler did not perform any optimization, the stack can still blow up, but you can verify that it indeed performs tail call optimization by calling this new `factorial` method:
+Here, the inner `def go` is the replacement of the original `factorial` method. Look at the body of the method - the first branch is the value `acc`. The second branch is a call to itself which *does not have to return back to this point to do any further calculations*. So essentially the caller of `go` can fire-and-forget. The compiler can now optimize this `tail call` into a `while loop` which eliminates the need for a stack to store the current state.
+
+So how exactly did we turn a recursive method using a stack to a tail call method that can be translated into a while loop? We use the `acc`, or an `accumulator` value. Each successive recursive call passes its own result down, thereby eliminating the need to use the stack to hold this result. You might have a couple of things to consider while converting your recursive call to a tail call:
+1. How to restructure the code to "accumulate" results instead of holding it in the stack and using it when the recursive call returns.
+2. In the base condition, where a default value is returned, you will return the "accumulated" value instead.
+
+If the compiler did not perform any optimization, the stack can still blow up, but you can verify that it indeed performs tail call optimization by calling this new `factorial` method:
 
 ```
   println(factorial(10000))
@@ -162,11 +168,12 @@ Your IDE might show you a hint that your method is tail recursive:
 
 ![Tail Call](https://caffinc.github.io/images/tail-call.png)
 
-You can also add an annotation in Scala to indicate that your method is `tail recursive`:
+You can also add an annotation in Scala to ensure that your method is indeed `tail recursive`:
 
 ```
   @scala.annotation.tailrec
 ```
+The compiler will complain if the method is not tail recursive.
 
 ### Conclusion
 
