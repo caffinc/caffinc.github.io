@@ -38,7 +38,7 @@ SecretKey key = new SecretKeySpec(Hex.decodeHex("0123456789ABCDEF0123456789ABCDE
 // Step 2: Create a new instance of an UBER keystore
 KeyStore keystore = KeyStore.getInstance("UBER"); // Change this to JKS if you want a Java Keystore
 // Step 3: Load empty data into the keystore
-keystore.load(null, null);
+keystore.load(null, null); // This is used to load an existing keystore from a (file)stream
 // Step 4: Store the key into the keystore
 keystore.setEntry("keyAlias", new KeyStore.SecretKeyEntry(key), new KeyStore.PasswordProtection("YourChosenKeyPassword".toCharArray()));
 // Step 5: Write the keystore to the filesystem
