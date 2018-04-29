@@ -121,8 +121,8 @@ KEK3 = (CP1 ^ VAR3) ^ CP2 ^ CP3
 
 This way the KEK is never compromised. You could also tell your HSM that you are importing a 4 component key, and import VAR3 as the last component.
 
-# How do I decrypt a MAC key encrypted by my HSM under a KEK?
-Using Bouncy Castle as a Security Provider, the following code should do the trick:
+# How do I decrypt a key encrypted by my HSM under a KEK/ZMK?
+Sometimes you're given a key that's encrypted under a ZMK that you need to decrypt and get back the plain key. You don't want to import it into an HSM (which would be the *right* thing to do but you don't want to listen to good advice). Using Bouncy Castle as a Security Provider, the following code should do the trick:
 
 ```
 Security.addProvider(new BouncyCastleProvider());
