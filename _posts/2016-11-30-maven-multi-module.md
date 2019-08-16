@@ -1,5 +1,5 @@
 ---
-title: "Submitting Mutli-Module artifacts to Maven: My JAR does not download!"
+title: "Submitting Multi-Module artifacts to Maven: My JAR does not download!"
 author: admin
 layout: post
 permalink: /2016/11/maven-multi-module/
