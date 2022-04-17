@@ -10,9 +10,6 @@ tags:
   - linux
   - ssh
 ---
-
-# Raspberry Pi 3 Truly Headless Setup
-
 ### A quick guide to getting your Raspberry Pi 3 running in headless mode with SSH and WiFi without a Keyboard, HDMI or Ethernet
 
 ##### Edit [16th August, 2017 - I'm slow and lazy? :(]
@@ -121,7 +118,7 @@ Here, the `static ip_address` values are whatever you want your IP address for t
 
 The `static routers` and `static domain_name_servers` should be your Gateway IP. To find your Gateway IP, you can run either the `ifconfig` method in Linux/Mac, or the `ipconfig` method in Windows. This will give you your a bunch of details about the network adapters on your machine. On Linux, find your `eth0` (Ethernet) or `wlan0` (WiFi) adapter block, and on Windows find your `Ethernet adapter` or `Wireless LAN adapter` block. Your Router/Gateway's IP would be something like `Default Gateway`:
 
-![IPConfig](https://caffinc.github.io/images/ipconfig.png)
+![IPConfig](/assets/images/ipconfig.png)
 
 Usually it's a number that looks like `10.0.0.1`, `10.1.10.1` or `192.168.1.1`. It pretty much always ends with 1.
 

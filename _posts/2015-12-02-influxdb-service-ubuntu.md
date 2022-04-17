@@ -17,7 +17,7 @@ tags:
   - systemctl
 ---
 
-<img src="https://customers.influxdb.com/assets/influxdb-light400-f0158e32e3e19795f9c19e572b491b6f6b7a9a4856469ee254df5872f31a501d.png" alt="InfluxDB Logo" style="width: 400"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Influxdb_logo.svg" alt="InfluxDB Logo" style="width: 400"/>
 
 I was looking for a good system to benchmark my application recently, and [InfluxDB](https://influxdb.com/ "InfluxDB") combined with [Grafana](http://grafana.org/ "Grafana") seemed like a really good solution. I decided to set it up on my Google Compute Engine instance. I must note that using a `Docker` image would probably be much, much simpler than installing components individually. I highly recommend going the [Docker way](https://hub.docker.com/r/alexcheng/docker-grafana-influxdb/ "Docker image with InfluxDB and Grafana").
 

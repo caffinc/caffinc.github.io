@@ -28,7 +28,7 @@ By now you must have a fair idea about how to look at and treat your data.
 
 Let's look at the Word Count problem in blocks:
 
-![Word Count](http://caffinc.com/wp-content/uploads/2016/01/WordCount.png)
+![Word Count](/assets/images/2016/01/WordCount.png)
 
 Here the `Connector` and the `Output` remain the same, with the `Connector` reading out of a file line by line, and the `Output` printing out the result onto the screen.
 
@@ -51,11 +51,11 @@ Here I've labeled the transformations as `mapXYZ` methods for mapping, `filterXY
 
 Once all the steps are free of side effects, and the data is treated as immutable, we're ready to distribute the processing on different machines. But before that, let's look at the current block-diagram version of the Word Count program:
 
-![Word Count Single Thread](http://caffinc.com/wp-content/uploads/2016/01/WordCountSingleThread.png)
+![Word Count Single Thread](/assets/images/2016/01/WordCountSingleThread.png)
 
 Now to convert this to a multi-threaded application, the `map` portion needs to be executed in parallel. Let's look at that block diagram:
 
-![Word Count Multi Thread](http://caffinc.com/wp-content/uploads/2016/01/WordCountThreads.png)
+![Word Count Multi Thread](/assets/images/2016/01/WordCountThreads.png)
 
 The map method is executed in multiple threads. We need a Queue that facilitates the delivery of the data to the mutliple threads with thread safety. The reduce method is out of these n threads to indicate that it runs on one machine and all data is collected into one final step. In reality, this might not be the case, and the reduction might happen in multiple threads and the data finally returned to the main thread. Let's look at the code:
 

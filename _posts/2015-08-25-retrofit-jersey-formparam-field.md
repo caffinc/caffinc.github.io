@@ -3,10 +3,6 @@ title: POST call to Jersey/Jax-rs endpoints with @FormParam using Retrofit @Fiel
 author: admin
 layout: post
 permalink: /2015/08/retrofit-jersey-formparam-field/
-videourl:
-  - 
-shareaholic_disable_recommendations:
-  - 1
 categories:
   - API
   - Java

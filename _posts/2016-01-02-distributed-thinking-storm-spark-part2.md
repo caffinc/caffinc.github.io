@@ -34,7 +34,7 @@ The Load method `LD` is the `System.out.println` method which prints the `lineCo
 
 Let's break this program into blocks:
 
-![Line Count](http://caffinc.com/wp-content/uploads/2016/01/LineCount.png)
+![Line Count](/assets/images/2016/01/LineCount.png)
 
 The `Connector` block is responsible for getting the data from the underlying system.<br>
 The `Distributed Transformation Code` block takes the list of lines Line 0 to Line (N-1) and transforms it into a number `1` and then sums it up to `N`, which is the number of lines in the file.<br>

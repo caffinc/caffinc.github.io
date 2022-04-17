@@ -169,7 +169,7 @@ If that isn't a `BigInt`, I don't know what is.
 
 Your IDE might show you a hint that your method is tail recursive:
 
-![Tail Call](https://caffinc.github.io/images/tail-call.png)
+![Tail Call](/assets/images/tail-call.png)
 
 You can also add an annotation in Scala to ensure that your method is indeed `tail recursive`:
 

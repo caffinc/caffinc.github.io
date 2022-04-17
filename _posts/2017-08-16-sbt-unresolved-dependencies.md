@@ -13,9 +13,6 @@ tags:
   - multimodule
   - build
 ---
-
-# Unresolved dependencies in multi-module SBT projects
-
 ### Or how I learnt a bit more SBT, and continue to be mildly disgruntled by the bomb
 
 ## Motivation:

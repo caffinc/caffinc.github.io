@@ -16,7 +16,7 @@ tags:
   - revision
 ---
 
-I love the [GitHub Pull Request Builder](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin)! It makes life so much easier by ensuring that pull requests are tested before they are merged into the main code. I have this running on most of my projects now, and I can't stress enough how useful this tool is. It adds a little ✓ or ❌ next to the PR depending on whether the build succeeded or failed.
+I love the [GitHub Pull Request Builder](https://plugins.jenkins.io/ghprb/)! It makes life so much easier by ensuring that pull requests are tested before they are merged into the main code. I have this running on most of my projects now, and I can't stress enough how useful this tool is. It adds a little ✓ or ❌ next to the PR depending on whether the build succeeded or failed.
 
 Recently, while working on migrating the Jenkins CI on a GCE instance to an Amazon EC2 instance, I was faced with a weird problem. I had installed the GitHub PR Builder on the new Jenkins instance, and it would fetch PRs to build, but most of them (Not all) would fail with the following log:
 
@@ -43,10 +43,10 @@ Recently, while working on migrating the Jenkins CI on a GCE instance to an Amaz
 After searching around a bit, I couldn't figure it out. I had set everything up correctly, and yet I kept getting this message even after coaxing the PR Builder to test repeatedly.
 
 As a last resort, I started looking through the project configuration more carefully. I noticed there was an `Advanced` button:
-![Git PR Builder Advanced Button (Closed)](http://caffinc.com/wp-content/uploads/2015/11/git-pr-adv-closed.png)
+![Git PR Builder Advanced Button (Closed)](/assets/images/2015/11/git-pr-adv-closed.png)
 
 I clicked it and noticed that I'd missed setting the `Refspec` field:
-![Git PR Builder Advanced Button (Expanded)](http://caffinc.com/wp-content/uploads/2015/11/git-pr-adv-expanded.png)
+![Git PR Builder Advanced Button (Expanded)](/assets/images/2015/11/git-pr-adv-expanded.png)
 
 I put in `+refs/pull/*:refs/remotes/origin/pr/*` and issued another request via GitHub and this time everything worked correctly! (Well... not everything. I had test failures, but that was a different problem altogether ;))
 

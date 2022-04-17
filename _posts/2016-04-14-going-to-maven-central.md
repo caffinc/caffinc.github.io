@@ -28,14 +28,13 @@ After that, you'll have to sign up at [Sonatype](http://central.sonatype.org/pag
 
 Once you've been accepted as the publisher for your group ID, you can go back to Bintray and select your project. You should see a `Maven Central` tab on the top right, next to the `Statistics` and `Files` tabs. Select this option. You should see something like this:
 
-![http://caffinc.github.io/images/bintray_maven_sync.png](http://caffinc.github.io/images/bintray_maven_sync.png)
+![Bintray Maven Sync](/assets/images/bintray_maven_sync.png)
 
 Enter your credentials from Sonatype here and click `Sync`. If all goes well, your project should sync up and show up in Maven Central in a day or two. If not, you'll probably get a completely useless error message.
 
 I noticed that I had to put the following in my pom files for it to work. I'll use my `jaggr` project as an example below:
 
 1. Project Info:
-
 I had to include some textual information about my project:
 
 	<name>jaggr</name>
@@ -43,7 +42,6 @@ I had to include some textual information about my project:
     <url>https://github.com/caffinc/jaggr</url>
 
 2. Developer Info:
-
 Developer information was required for it to work correctly on Bintray and Maven:
 
     <developers>
@@ -56,7 +54,6 @@ Developer information was required for it to work correctly on Bintray and Maven
     </developers>
 
 3. License Info:
-
 Without License Information, even if you provide it using other means, the sync fails:
 
     <licenses>
@@ -68,7 +65,6 @@ Without License Information, even if you provide it using other means, the sync 
     </licenses>
 
 4. SCM Info:
-
 This I'm not really sure about. But I put it in just to be safe:
 
     <scm>
@@ -76,7 +72,6 @@ This I'm not really sure about. But I put it in just to be safe:
     </scm>
 
 5. Source and Javadoc
-
 While you don't really need the following in your pom file if you have a better way to do it, but I found that adding a couple of plugins to get the source jar and the javadoc jar was very helpful, especially because I found it easier to just hand over my source and javadoc as a jar instead of wasting a few hours figuring out how to avoid that. In any case, the source is on Github.
  
     <build>

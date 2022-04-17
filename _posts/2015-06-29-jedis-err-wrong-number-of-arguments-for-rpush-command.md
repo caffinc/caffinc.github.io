@@ -3,8 +3,6 @@ title: 'Jedis: ERR wrong number of arguments for &#8216;rpush&#8217; command'
 author: admin
 layout: post
 permalink: /2015/06/jedis-err-wrong-number-of-arguments-for-rpush-command/
-videourl:
-  - 
 categories:
   - Java
   - Redis

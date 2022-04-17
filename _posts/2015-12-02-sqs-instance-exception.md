@@ -20,7 +20,7 @@ tags:
   - exception
 ---
 
-<img src="http://caffinc.com/wp-content/uploads/2015/11/amazon-aws-logo.png" alt="Amazon AWS Logo" style="width: 200px;"/><img src="http://caffinc.com/wp-content/uploads/2015/11/amazon-sqs-logo.png" alt="Amazon AWS Logo" style="width: 100px;"/>
+<img src="/assets/images/2015/11/amazon_aws.svg" alt="Amazon AWS Logo" style="width: 200px; padding-right: 40px;"/><img src="/assets/images/2015/11/amazon_sqs.png" alt="Amazon SQS Logo" style="width: 200px;"/>
 
 My [previous post](/2015/11/amazon-sqs-alerts/ "Amazon SQS Alerts") discussed about creating an Alerts system in Java using an `Amazon SQS` backend.
 

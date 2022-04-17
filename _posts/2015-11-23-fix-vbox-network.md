@@ -1,5 +1,5 @@
 ---
-title: Fixing `VERR_INTNET_FLT_IF_NOT_FOUND` problems
+title: Fixing VERR_INTNET_FLT_IF_NOT_FOUND problems
 author: admin
 layout: post
 permalink: /2015/11/fix-vbox-network/
@@ -19,11 +19,11 @@ I recently installed the [November Windows 10 update](http://blogs.windows.com/w
 
 I *knew* there would be something wrong with VirtualBox even before I started it but when I started up the `Docker Quickstart Terminal` and it exited with an error, my fears were confirmed.
 
-![Docker Start Fail](http://caffinc.com/wp-content/uploads/2015/11/docker-start-fail.png)
+![Docker Start Fail](/assets/images/2015/11/docker-start-fail.png)
 
 I opened up VirtualBox and tried starting the `default` image manually and this is what I was greeted with:
 
-![VirtualBox Network Error](http://caffinc.com/wp-content/uploads/2015/11/vbox-network-error.png)
+![VirtualBox Network Error](/assets/images/2015/11/vbox-network-error.png)
 
 The error message was:
 
@@ -41,8 +41,11 @@ I tried doing a few things - restarting VirtualBox, restarting my machine, reins
 
 I opened my `Control Panel > Network & Internet > Network Connections` and located my VirtualBox Host-Only Network adapter, called `VirtualBox Host-Only Network #6` on my machine. I right-clicked it and selected the `Properties`, and checked the un-checked `VirtualBox NDIS6 Bridged Networking Driver` and started VirtualBox again.
 
-![Fix the VirtualBox Host-Only Network adapter](http://caffinc.com/wp-content/uploads/2015/11/adapter-fix.png)
+![Fix the VirtualBox Host-Only Network adapter](/assets/images/2015/11/adapter-fix.png)
 
 This time the `default` image started up without errors! If your checkbox is checked already, you might have to uncheck and check again. It might be buggy.
 
 Note: This isn't the complete solution. It just fixes the issue with the images not starting up in VirtualBox. It does not fix the issue that prevents the Docker QuickStart Terminal from connecting to the booted image. For now, I just removed the image and let the QuickStart Terminal re-create the image, which works but also means that I have to download my images again :(
+
+Note 2:
+During the migration of my blog several times in the past years, I didn't have a robust backup mechanism set up, because "eh, it's just a small blog" butt unfortunately I now have no backup of all the images that were originally posted in this article.

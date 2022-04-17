@@ -16,15 +16,14 @@ tags:
   - static
   - final
 ---
-# Reflection is a helluva drug
+## Reflection is a helluva drug
 
 `Reflection` allows you to tinker with Java in ways that are clearly against everything you've learnt from your Object Oriented Programming lessons.
 
 Reflection is like being handed a master-key. I've used it to come up with solutions to problems that didn't have an easier or cleaner way in Java - cutting down cumbersome code writing.
 
 Minor disclaimer:
-
-# Don't do this! You might open Pandora's Box.
+**Don't do this! You might open Pandora's Box.**
 
 If you still want to go ahead, read on.
 
@@ -77,7 +76,7 @@ You can overcome this behavior by setting the value of the `static final` field 
 
 This prevents the compiler from optimizing the code, allowing you to tinker with it using Reflection.
 
-# Statiflex:
+## Statiflex:
 If you don't want to do it yourself, and instead tell people you "found a library on the Internet that does it", here's a link to my repository containing a jar that will let you do the same: [Statiflex](https://github.com/caffinc/statiflex/releases/tag/1.0 "Statiflex")
 
 You can add it as a Maven dependency like this:

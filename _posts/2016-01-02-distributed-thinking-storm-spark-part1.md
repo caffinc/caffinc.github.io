@@ -32,7 +32,7 @@ When a colleague of mine wrote a solution to the project using Storm, I didn't q
 
 Suppose you have a data set that you need to perform some actions upon. Nearly all problems involving data can be broken into an `ETL` process - `Extract`, `Transform` and `Load`:
 
-![ETL](http://caffinc.com/wp-content/uploads/2015/12/ETL.png)
+![ETL](/assets/images/2015/12/ETL.png)
 
 (Image drawn using [Draw.io](https://www.draw.io/ "Draw.io") - Check it out, it's awesome!)
 
@@ -62,7 +62,7 @@ The DS is the source. There can be several ways in which our system ingests the 
 * Data Streams
 * Logs and Flatfiles
 
-![Data Store Types](http://caffinc.com/wp-content/uploads/2016/01/DataStoreTypes.png)
+![Data Store Types](/assets/images/2016/01/DataStoreTypes.png)
 
 These data stores can be broadly split into two types of processing strategies:
 

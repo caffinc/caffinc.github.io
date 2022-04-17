@@ -122,37 +122,37 @@ Some of the exceptions are below:
 
 1. ProGuard issues:
 
-When you compile your project, it fails with this exception:
+  When you compile your project, it fails with this exception:
 
     (android:proguard) proguard.ParseException: Expecting class path separator ';' before '\Android\android-sdk\platforms\android-23\android.jar' in argument number 121
 
-This occurs if you didn't listen to what I said above about not having spaces in your Android SDK installation location. To solve this, move your SDK to a path without spaces and set your `ANDROID_HOME` environment variable correctly.
+  This occurs if you didn't listen to what I said above about not having spaces in your Android SDK installation location. To solve this, move your SDK to a path without spaces and set your `ANDROID_HOME` environment variable correctly.
 
 2. Mysterious Resolver Indexer errors
 
-When you compile this project, you can see this message:
+  When you compile this project, you can see this message:
 
     Resolver Indexer: Repository is absent or invalid: C:\Program%20Files%20(x86)\Android\android-sdk\extras\android\m2repository
     
-This too probably occurs because of an installation location with spaces (As you can see above). I haven't had issues because of this, and I didn't do anything to fix this in particular. Once I fixed the problem above, the project started working so I didn't worry about this.
+  This too probably occurs because of an installation location with spaces (As you can see above). I haven't had issues because of this, and I didn't do anything to fix this in particular. Once I fixed the problem above, the project started working so I didn't worry about this.
 
 3. Class already found - BUT THERE IS ONLY ONE!
 
-When you try to compile your project, you get this error:
+  When you try to compile your project, you get this error:
 
     SampleActivity is already defined as class SampleActivity class SampleActivity extends Activity
 
-This one really annoyed me. I had just created a new project out of a template and it was giving me this error. Be brave, this error is not an error. It's not able to compile things properly and there are some other issues in your setup. Maybe your SDK isn't in the right location. Maybe your SBT isn't setup correctly. Whatever the case may be, this is not to be fixed directly in any case. At least not in the example given above. If you encounter this, your problem lies elsewhere.
+  This one really annoyed me. I had just created a new project out of a template and it was giving me this error. Be brave, this error is not an error. It's not able to compile things properly and there are some other issues in your setup. Maybe your SDK isn't in the right location. Maybe your SBT isn't setup correctly. Whatever the case may be, this is not to be fixed directly in any case. At least not in the example given above. If you encounter this, your problem lies elsewhere.
 
-Try to create a new Android project using just SBT and see if that helps. You can create this by running:
+  Try to create a new Android project using just SBT and see if that helps. You can create this by running:
 
     sbt "gen-android android-23 com.foo Foo"
 
-This will create a new project right in the location the command was run. Now launch SBT there using `sbt` and run your project using `android:run`. This will download a bunch of dependencies if any were missing and should start the project for you.
+  This will create a new project right in the location the command was run. Now launch SBT there using `sbt` and run your project using `android:run`. This will download a bunch of dependencies if any were missing and should start the project for you.
 
 <h2>6. Conclusion</h2>
 
 You must *really* want to develop things in Scala if you took this route. "It works, BUT AT WHAT COST!?" I hear you shout. That's a journey I haven't completed yet. If you think you're great at Scala, then this is probably a great option for you. The cost is entirely dependent on you.
 
-Hope you manage to get this to work for you! I'm off to write something simple. If you think you have lots of time and would like to help me out a little, please feel free to send me an email: admin @ caffinc . com.
+Hope you manage to get this to work for you! I'm off to write something simple. If you think you have lots of time and would like to help me out a little, please feel free to send me an [email](mailto:admin@caffinc.com).
  

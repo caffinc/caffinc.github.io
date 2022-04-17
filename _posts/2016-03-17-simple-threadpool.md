@@ -33,7 +33,7 @@ Turns out, Fixed Threadpools are rather easy to implement if you know what you'r
 
 Let's look at *what* a threadpool is before the *how*:
 
-![Threadpool](https://caffinc.github.io/images/Threadpool.png)
+![Threadpool](/assets/images/Threadpool.png)
 
 So here we can see that the `Threadpool Executor` accepts `Runnable` objects and puts it into a `Runnable Queue`. This queue represents all the tasks that are sent to be executed by the `Threadpool`. The `Threadpool` itself is a bunch of threads that are waiting to pull out `Runnable`s from the queue and execute them in their own `run()` methods.
 

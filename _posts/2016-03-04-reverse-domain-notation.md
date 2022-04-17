@@ -16,7 +16,7 @@ tags:
   - bson
 ---
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/1280px-MongoDB-Logo.svg.png" alt="MongoDB Logo" style="height: 100px"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" alt="MongoDB Logo" style="width: 200px"/>
 
 I've been trying to wrap my head around getting my jar into Maven Central. The process used to be easier, and now it's a lot of paperwork and fineprint.
 
@@ -26,12 +26,10 @@ While this is all fine, my overworked brain decided to check out some of the pac
 
 I quickly discovered that not only are package names not guaranteed to be under the control of the package creator (In this case MongoDB), but there are parts of the Internet that's been lost in time but still manages to survive. Bson.org was created way back in 1999, when I first discovered the Internet and decided that I needed an email account with "99" in it. I quickly came to despise email IDs which contain any form of dating information.
 
-![bson.org homepage](https://caffinc.github.io/images/bson.org.png)
+![bson.org homepage](/assets/images/bson.org.png)
 
 Not only is the website designed in line with the quick-and-dirty Frontpage or bare early HTML websites of yesteryear, it's somehow been kept alive for over 16 years now!
 
 Either the person who owns the website really loves it, or is just trolling the guys who're working on the BSON spec. Either way, it's a quick glimpse into how far we've come in terms of web technologies, and what passes for great design.
-
-What have you learned today?
 
 P.S. I know that package names don't always have to resolve to domains owned by the people creating the packages, I just figured that they'd probably be related to the company/product the package deals with.

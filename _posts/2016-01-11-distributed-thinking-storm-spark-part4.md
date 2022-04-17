@@ -33,7 +33,7 @@ I first used Twitter to actually process batches of data for a TV viewership pro
 
 The major components of Storm can be explained with the image below:
 
-![Storm Topology](https://storm.apache.org/documentation/images/topology.png)
+![Storm Topology](https://storm.apache.org/releases/current/images/topology-tasks.png)
 
 You can map this to the current system as follows:
 

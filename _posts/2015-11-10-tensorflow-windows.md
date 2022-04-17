@@ -63,7 +63,7 @@ So coming straight to the point - I looked through the installation instructions
 
 However things didn't work quite the way described here. I installed the latest `Docker Toolbox` from their [website](https://www.docker.com/docker-toolbox "Docker website") (v1.9.0b) and started it up. I got the Docker Quickstart Terminal screen:
 
-![Docker Quickstart Terminal](http://caffinc.com/wp-content/uploads/2015/11/docker-quickstart-terminal.png)
+![Docker Quickstart Terminal](/assets/images/2015/11/docker-quickstart-terminal.png)
 
 If you have issues installing Docker, you might want to [check my other post](http://caffinc.github.io/2015/09/docker-getting-started/).
 

@@ -20,7 +20,7 @@ tags:
 
 <img src="http://spark.apache.org/images/spark-logo-trademark.png" alt="Apache Spark Logo" style="height: 100"/><img src="http://storm.apache.org/images/logo.png" alt="Apache Storm Logo" style="height: 100"/>
 
-<h1>0. Introduction</h1>
+## 0. Introduction
 
 This post is meant to serve as a starting point for people using Java or Scala to process large amounts of data, and need a quick introduction to how to do it - either in Spark or in Storm.
 
@@ -28,7 +28,7 @@ It is not meant to be a Spark vs Storm debate, there are plenty of those out the
 
 This is meant to be a starting point for people new to the whole concept of distributed processing of data, and need a headstart. It's 2015, and my blog post is probably 5 years too late, but it's never too late to get started!
 
-<h3>What I plan to talk about:</h3>
+### What I plan to talk about:
 
 1. Distributed Thinking
     1. When to use it?
