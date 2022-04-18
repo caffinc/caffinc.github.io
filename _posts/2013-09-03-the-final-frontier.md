@@ -3,6 +3,7 @@ title: The Final Frontier
 author: admin
 layout: post
 permalink: /2013/09/the-final-frontier/
+archive: true
 categories:
   - Uncategorized
 ---
