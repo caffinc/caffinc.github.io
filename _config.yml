@@ -18,7 +18,7 @@ authors:
   admin:
     name: Sriram
     display_name: Sriram
-    avatar: /assets/images/sriram.jpeg
+    avatar: 'assets/images/sriram.jpeg'
     email: admin@caffinc.com
     web: https://www.caffinc.com
     twitter: https://twitter.com/0k_ram
