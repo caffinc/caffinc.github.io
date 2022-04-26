@@ -2,6 +2,7 @@
 title: "Why did I become a software developer?"
 author: admin
 layout: post
+image: assets/images/2022/04/nicolas-thomas-3GZi6OpSDcY-unsplash.jpg
 permalink: /2022/04/why-software-dev/
 categories:
   - Personal
