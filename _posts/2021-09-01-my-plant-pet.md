@@ -2,7 +2,7 @@
 title: "My Plant Pet"
 author: admin
 layout: post
-image: /assets/images/2021/09/myplantpet.webp
+image: assets/images/2021/09/myplantpet.webp
 permalink: /2021/09/my-plant-pet/
 featured: true
 categories:
@@ -16,7 +16,7 @@ Working from home has taken a toll on all of us. I say that despite the fact tha
 
 I've slowly added more greenery to my house and have also, undoubtedly, added more technology as well. While I would love to say that the plants have brought me as much joy as the tech, sadly that is not always true. They die. A lot.
 
-![Dying Peace Lily](/assets/images/2021/09/dyinglily.jpg)
+![Dying Peace Lily](assets/images/2021/09/dyinglily.jpg)
 
 My quest to understand these plants better so they don't keep dying on me took a turn for the weird. I wondered if I could talk to these plants and I stumbled upon [Singing Plants](https://www.youtube.com/watch?v=3rlTIPiLYHo). Wellness, oneness, zen-ness and all that mumbo jumbo aside, I wanted to make one for myself because *it was **cool***.
 
@@ -43,7 +43,7 @@ Bring this lovely succulent home, turn it on, pair with your phone, and you'll b
 You can even put it on your desk at work to keep you company while you code away - perhaps helping you with some rubber ducking while making your workspace a bit more green!
 
 ## Sensing proximity with iBeacon
-![iBeacon](/assets/images/2021/09/beacon.jpeg)
+![iBeacon](assets/images/2021/09/beacon.jpeg)
 
 The proximity sensing is based on [iBeacon](https://en.wikipedia.org/wiki/IBeacon). Beacon devices broadcast a message to all devices nearby that might be listening. The iBeacon message consists of four parts:
 
@@ -64,7 +64,7 @@ In our case, an Expo application is the Beacon transmitter, and the plant is the
 ## Securing the interaction
 This project is not the next secure vault, so please don't treat it as such. Bluetooth Beacons are not the most secure way of communicating. However, with Auth0, you can make at least part of the interaction very secure.
 
-![Auth0](/assets/images/2021/09/auth0.png)
+![Auth0](assets/images/2021/09/auth0.png)
 
 The application signs into Auth0 in order to obtain a unique ID which is converted to a UUID. When the plant turns on, it displays a 4-digit code that must be entered in the application to make sure that you broadcast an intentional message.
 
