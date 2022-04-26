@@ -3,6 +3,7 @@ title: "Picking a backend language"
 author: admin
 layout: post
 permalink: /2022/04/pick-backend-langauge/
+featured: true
 categories:
   - technology
 tags:
