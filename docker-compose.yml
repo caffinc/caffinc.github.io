@@ -1,5 +1,6 @@
 jekyll:
     image: jekyll/jekyll:latest
+    container_name: caffinc-blog
     command: jekyll serve --force_polling --trace
     ports:
         - 4000:4000

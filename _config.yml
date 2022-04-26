@@ -7,7 +7,7 @@ url: https://caffinc.github.io
 
 #logo: 'assets/images/logo.png'
 #favicon: 'assets/images/logo.png'
-#baseurl: /mediumish-theme-jekyll
+baseurl: ''
 #google_analytics: 'UA-46278016-1'
 disqus: 'caffinc'
 include: ["_pages"]
