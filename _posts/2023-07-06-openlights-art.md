@@ -27,7 +27,7 @@ A few months later, while listening to an **[excellent episode on Software Engin
 
 The first of these designs is the [Beacon](https://openlights.art/#/designs/beacon).
 
-<video controls width="100%" height="100">
+<video controls width="480">
   <source src="/assets/images/2023/07/beacon.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
